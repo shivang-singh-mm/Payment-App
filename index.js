@@ -13,7 +13,7 @@ app.use('/payment-app',require('./routes/route'))
 app.use(express.static(path.join(__dirname,"./note/build")))
 app.get("*",function(_,res){
     res.sendFile(
-        path.join(__dirname,"./clint/build/index.html"),
+        path.join(__dirname,"./client/build/index.html"),
         function(err){
             res.status(500).send(err);
         }
