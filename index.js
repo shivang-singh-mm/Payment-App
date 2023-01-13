@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}))
 database();
 
 app.use('/payment-app',require('./routes/route'))
-app.use(express.static(path.join(__dirname,"./note/build")))
+app.use(express.static(path.join(__dirname,"./client/build")))
 app.get("*",function(_,res){
     res.sendFile(
         path.join(__dirname,"./client/build/index.html"),
